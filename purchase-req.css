@@ -1,0 +1,548 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #2c3e50;
+    color: #ECF0F1; /* Warna teks putih */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed; /* Menetapkan posisi tetap */
+    top: 0;
+    left: 0;
+}
+.sidebar .nav .dropdown {
+    position: relative;
+}
+
+.sidebar .nav .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0;
+    border-radius: 8px; /* Sesuaikan dengan border-radius parent */
+}
+
+.sidebar .nav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar .nav .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    outline: 2px solid black; /* Tambahkan outline hitam saat di-hover */
+}
+
+.sidebar .nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+.warehouse {
+    margin: 0; /* Memberikan margin kiri agar elemen berada di samping sidebar */
+    padding: 20px; /* Opsional: Memberikan padding untuk tampilan yang lebih baik */
+    margin-left: 275px; 
+}
+
+.sidebar .logo img {
+    width: 220px;
+    margin : 20px 20px;
+}
+
+.sidebar .nav {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar .nav li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sidebar .nav li a {
+    text-decoration: none;
+    color: #ECF0F1; /* Warna teks putih */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar .nav li a.active,
+.sidebar .nav li a:hover {
+    background: #bdc3c7;
+    color: #333; /* Warna teks saat aktif atau di-hover */
+}
+
+.sidebar .nav li a i {
+    margin-right: 10px;
+}
+
+.sidebar .logout {
+    margin-top: auto; /* Menggunakan margin-top auto untuk mendorong tombol ke bawah */
+    margin-bottom: 30px; /* Menggunakan margin-bottom auto untuk mendorong tombol ke atas */
+    padding: 10px 20px;
+    background: #D90429;
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Border radius yang menarik */
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    align-self: center; /* Menempatkan tombol di tengah secara horizontal */
+}
+
+.sidebar .logout:hover {
+    background-color: #B0031E; /* Warna saat hover, opsional */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #2C3E50; /* Warna latar belakang sesuai gambar */
+    padding: 10px 20px; /* Padding untuk memberikan ruang di sekitar konten */
+    border-radius: 10px; /* Membuat sudut membulat */
+    color: #ECF0F1; /* Warna teks */
+}
+
+.user-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px; /* Ukuran gambar profil */
+    height: 50px; /* Ukuran gambar profil */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+.user-details {
+    text-align: left; /* Teks rata kiri */
+}
+
+.user-details .name {
+    font-weight: bold; /* Nama dengan font tebal */
+    margin: 0; /* Menghilangkan margin default */
+}
+
+.user-details .title, .user-details .nip {
+    margin: 0; /* Menghilangkan margin default */
+    font-size: 0.9em; /* Ukuran font lebih kecil untuk title dan NIP */
+    color: #BDC3C7; /* Warna teks lebih terang untuk title dan NIP */
+}
+
+.content-container {
+    background-color: #FFFFFF;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Atur lebar sesuai keinginan, misalnya 80% */
+    margin-left: auto; /* Pindahkan container ke pojok kanan */
+    margin-right: 0;
+}
+
+.content-container button {
+    border-radius: 5px; /* Atur radius sesuai keinginan */
+    background-color: #2B2D42; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hilangkan border default */
+    padding: 10px 20px; /* Atur padding sesuai keinginan */
+    cursor: pointer; /* Ubah cursor saat hover */
+}
+
+.content-container button:hover {
+    background-color: #1A1B2E; /* Warna tombol saat hover */
+}
+
+form-section, .table-section, .detail-section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #3498DB;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 10px; /* Jarak antara tombol */
+    margin: 20px 0;
+}
+
+.actions button {
+    border-radius: 5px; /* Atur radius sesuai keinginan */
+    background-color: #2B2D42; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hilangkan border default */
+    padding: 10px 20px; /* Atur padding sesuai keinginan */
+    cursor: pointer; /* Ubah cursor saat hover */
+}
+
+.actions button:hover {
+    background-color: #1A1B2E; /* Warna tombol saat hover */
+}
+
+.table-section {
+    background-color: #d3d3d3; /* Warna latar belakang abu-abu */
+    padding: 20px;
+    border-radius: 5px; /* Sesuaikan dengan border radius yang diinginkan */
+    margin: 20px 0;
+}
+
+.table-section h2 {
+    background-color: #2c3e50; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0; /* Border radius untuk bagian atas */
+}
+
+.table-section .table-controls {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus elemen jika meluber */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.table-section .table-controls label,
+.table-section .table-controls input,
+.table-section .table-controls button {
+    margin-right: 10px;
+    margin-bottom: 10px; /* Tambahkan margin bawah untuk spasi vertikal */
+}
+
+.table-section .table-controls input[type="number"],
+.table-section .table-controls input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    max-width: 150px; /* Batasi lebar input */
+}
+
+.table-section .table-controls button {
+    background-color: #2c3e50; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px; /* Border radius untuk tombol */
+}
+
+.table-section .table-controls button:hover {
+    background-color: #1a252f; /* Warna saat hover */
+}
+
+.table-section .table-controls .search-group {
+    display: flex;
+    align-items: center;
+}
+
+.table-section .table-controls .search-group label {
+    margin-right: 5px; /* Jarak kecil antara label dan input */
+    margin-bottom: 0; /* Hilangkan margin bawah */
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table-section table, .table-section th, .table-section td {
+    border: 1px solid #000; /* Warna border hitam */
+}
+
+.table-section th, .table-section td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table-section th {
+    background-color: #2c3e50; /* Warna latar belakang header tabel */
+    color: white; /* Warna teks header tabel */
+}
+
+.table-section .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.table-section .pagination button {
+    background-color: #2c3e50; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px; /* Border radius untuk tombol */
+}
+
+.table-section .pagination button:hover {
+    background-color: #1a252f; /* Warna saat hover */
+}
+
+.detail-section {
+    background-color: #d3d3d3; /* Warna latar belakang abu-abu */
+    padding: 20px;
+    border-radius: 5px; /* Sesuaikan dengan border radius yang diinginkan */
+    margin: 20px 0;
+}
+
+.detail-section h2 {
+    background-color: #2c3e50; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0; /* Border radius untuk bagian atas */
+}
+
+.detail-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.detail-section table, .detail-section th, .detail-section td {
+    border: 1px solid #000; /* Warna border hitam */
+}
+
+.detail-section th, .detail-section td {
+    padding: 10px;
+    text-align: left;
+}
+
+.detail-section td span {
+    display: block;
+    background-color: #D90429; /* Warna latar belakang merah */
+    color: white; /* Warna teks putih */
+    padding: 10px;
+    border-radius: 5px; /* Border radius untuk sel */
+}
+
+.detail-section button {
+    background-color: #2c3e50; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Border radius untuk tombol */
+    margin-top: 20px;
+}
+
+.detail-section button:hover {
+    background-color: #1a252f; /* Warna saat hover */
+}
+
+.pagination {
+    display: flex;
+    gap: 10px; /* Jarak antara tombol */
+    justify-content: flex-end; /* Pindahkan tombol ke pojok kanan */
+    margin-top: 20px;
+}
+
+.pagination button {
+    border-radius: 5px; /* Atur radius sesuai keinginan */
+    background-color: #2B2D42; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hilangkan border default */
+    padding: 10px 20px; /* Atur padding sesuai keinginan */
+    cursor: pointer; /* Ubah cursor saat hover */
+}
+
+.pagination button:hover {
+    background-color: #1A1B2E; /* Warna tombol saat hover */
+}
+
+
+/* Terapkan font Montserrat ke seluruh elemen */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Terapkan font Montserrat ke elemen spesifik jika diperlukan */
+h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-section, .table-section, .detail-section {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Tengah-kan container */
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 10px;
+}
+
+.nav .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav .dropdown-content a {
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+.nav .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.table-section table tbody tr {
+    cursor: pointer; /* Ubah kursor menjadi pointer saat di-hover */
+    transition: background-color 0.3s ease;
+}
+
+.table-section table tbody tr:hover {
+    background-color: #f1f1f1; /* Warna latar belakang saat di-hover */
+}
+
+.content-container {
+    padding: 20px;
+}
+
+.purchase-request-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.request-table th, .request-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.request-table th {
+    background-color: #2c3e50;
+    color: white;
+    position: relative;
+}
+
+.request-table th::after {
+    content: '\2191\2193'; /* Panah atas dan bawah */
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.request-table td {
+    background-color: white;
+}
+
+.request-table td:last-child {
+    display: flex;
+    gap: 10px;
+}
+
+.request-table td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.request-table td button.view {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.request-table td button.edit {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.request-table td button.delete {
+    background-color: #D90429;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashlunERP - Dashboard</title>
+    <link rel="stylesheet" href="transfer-mat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/svg2.svg" alt="FashlunERP Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="#"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-shopping-cart"></i>Sales & Marketing</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Sales Inquiry</a></li>
+                    <li><a href="#">Sales Quotation</a></li>
+                    <li><a href="#">Sales Order</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-warehouse"></i>Warehouse</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Material Entry</a></li>
+                    <li><a href="#">Product Entry</a></li>
+                    <li><a href="#">Material Transfer</a></li>
+                    <li><a href="#">Product Transfer</a></li>
+                    <li><a href="#">Purchase Request</a></li>
+                    <li><a href="#">Material Report</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-shopping-bag"></i>Purchasing</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Purchase Request</a></li>
+                    <li><a href="#">Purchase Inquiry</a></li>
+                    <li><a href="#">Purchase Order</a></li>
+                    <li><a href="#">Purchase Return</a></li>
+                    <li><a href="#">Arsip Invoice</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-industry"></i>Production</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Production Plan</a></li>
+                    <li><a href="#">List of Material</a></li>
+                    <li><a href="#">Request and Receipt</a></li>
+                    <li><a href="#">Production Monitoring</a></li>
+                    <li><a href="#">Quality Control</a></li>
+                    <li><a href="#">Transfer Product</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-calculator"></i>Finance</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Sales Invoice</a></li>
+                    <li><a href="#">Purchase Invoice</a></li>
+                    <li><a href="#">Chart of Accounts</a></li>
+                    <li><a href="#">General Ledger</a></li>
+                    <li><a href="#">Jurnal Umum</a></li>
+                    <li><a href="#">Neraca Saldo</a></li>
+                    <li><a href="#">Jurnal Penyelesaian</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-users"></i>Human Resources</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">All Employees</a></li>
+                    <li><a href="#">Attendance</a></li>
+                    <li><a href="#">Employee Schedule</a></li>
+                    <li><a href="#">Employee Evaluation</a></li>
+                    <li><a href="#">Salary</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="landingpage.html"><button class="logout">Logout</button></a>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2 class="warehouse">WAREHOUSE</h2>
+            <div class="user-info">
+                <img src="assets/Profile.png" alt="Profile Picture">
+                <div class="user-details">
+                    <p class="name">Mr. Lorem</p>
+                    <p class="title">Marketing Manager</p>
+                    <p class="nip">NIP: 11223344556677</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Kontainer untuk ketiga bagian -->
+        <div class="content-container">
+            <div class="material-transfer">
+                <div class="buttons">
+                    <div class="top-buttons">
+                        <button class="add-material-transfer">Add Material Transfer</button>
+                        <button class="csv-import">CSV Import</button>
+                    </div>
+                    <div class="show-entries">
+                        <label for="entries" class="show-label">Show</label>
+                        <select id="entries">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <label for="entries" class="entries-label">entries</label>
+                    </div>
+                </div>
+                <div class="table-controls">
+                    <button class="select-all">Select All</button>
+                    <button class="deselect-all">Deselect All</button>
+                    <button class="copy">Copy</button>
+                    <button class="csv">CSV</button>
+                    <button class="excel">Excel</button>
+                    <button class="pdf">PDF</button>
+                    <button class="print">Print</button>
+                    <button class="columns">Columns</button>
+                    <button class="delete-selected">Delete selected</button>
+                    <label for="search">Search:</label>
+                    <input type="text" id="search">
+                </div>
+                <div class="table-container">
+                    <table class="material-transfer-table">
+                        <thead>
+                            <tr>
+                                <th>ID Transfer Material</th>
+                                <th>ID List of Material</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TM02</td>
+                                <td>LOM02</td>
+                                <td>Delivered</td>
+                                <td>
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TM01</td>
+                                <td>LOM01</td>
+                                <td>Delivered</td>
+                                <td>
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button class="previous-btn">Previous</button>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
